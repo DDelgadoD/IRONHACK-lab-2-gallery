@@ -1,5 +1,6 @@
 body{
     margin:0;
+    background-color: rgb(249,249,249);
 }
 
 header{
@@ -57,10 +58,70 @@ header div{
     padding:10px;
 }
 
+section{
+    display: flex;
+}
+
 .barra-lateral{
     width: 25%;
-    margin: 10%;
-    margin-top: -11%;
+    margin: -11% 2% 0% 10%;
     background-color: white;
     text-align: center;
+    border-radius: 1%;
+    border: 1px solid rgb(248,248,248);
+    padding: 20px;
 }
+
+.barra-lateral img{
+    border-radius: 100%;
+    margin: 30px;
+}
+
+
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0% 2%;
+}
+
+.labels{
+    width: 100%;
+    aspect-ratio: 8;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.estandartes{
+    width:20%;
+    border: 1px solid black;
+    align-self: stretch;
+}
+
+
+section nav{
+    width:75%;
+    aspect-ratio: 10;
+    border: 1px solid black;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    width: 100%;    
+}
+
+.grid-item{
+    background-color: black;
+    width:100%;
+}
+
+.grid img{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+
