@@ -6,11 +6,12 @@ body{
 header{
     width:100%;
     background-image: url("images/header.jpg");
-    aspect-ratio: 5;
-
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 5.8;
 }
 
-header > nav{
+body > nav{
     display: flex;
     justify-content:space-between;
     width: 100%;
@@ -19,42 +20,47 @@ header > nav{
     border-bottom: 1px solid white;
     background: linear-gradient(rgba(0, 0, 0, 0.6),transparent);
     color: white;
-
-
+    top:0;
+    position:fixed;
+    
 }
 
-header ul{
+body > nav.scrolled{
+    color: black;
+}
+
+body > nav ul{
     display: flex;
     flex-direction: row;
     list-style: none;
     align-items: stretch;
 }
-
-header li{
+ 
+body > nav li{
     margin:0 10px;
     height: 100%;    
 }
 
-header li:hover{
+body > nav li:hover{
     border-bottom: 3px solid white;    
 }
 
-header form{
+body > nav form{
     width: 50%;
 }
 
-header input{
+body > nav input{
     width:100%;
     border-radius: 20px;
     padding: 15px;
 }
 
-header button{
+body > nav button{
     border-radius: 20px;
     padding:10px;
 }
 
-header div{
+body > nav div{
     padding:10px;
 }
 
@@ -63,21 +69,30 @@ section{
 }
 
 .barra-lateral{
-    width: 25%;
-    margin: -11% 2% 0% 10%;
+    width: 30%;
+    margin: -9% .5% 0% 2.5%;
     background-color: white;
     text-align: center;
     border-radius: 1%;
     border: 1px solid rgb(248,248,248);
-    padding: 20px;
+    padding: 15px;
+    overflow: visible;
+    height: 100%;
 }
 
 .barra-lateral img{
+    width: 100px;
     border-radius: 100%;
-    margin: 30px;
+    margin: 20px 0 0;
 }
 
-
+.barra-lateral button{
+    border-radius: 20px;
+    padding:10px;
+    width:90%;
+    margin-bottom: 10px;
+    border: none;
+}
 
 .gallery{
     display: flex;
@@ -92,14 +107,13 @@ section{
     display:flex;
     justify-content: space-between;
     align-items: center;
-
 }
+
 .estandartes{
     width:20%;
     border: 1px solid black;
     align-self: stretch;
 }
-
 
 section nav{
     width:75%;
@@ -107,9 +121,17 @@ section nav{
     border: 1px solid black;
 }
 
-.grid{
+.grid-s{
     display: grid;
     grid-template-columns: auto auto;
+    grid-gap: 10px;
+    width: 100%;    
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
     grid-gap: 10px;
     width: 100%;    
 }
@@ -122,6 +144,9 @@ section nav{
 .grid img{
     width: 100%;
     aspect-ratio: 1;
+    
 }
 
-
+.grid img:hover {
+    transform: scale(1.2);   
+}
